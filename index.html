@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="shortcut icon" href="images/f1logo.svg" type="image/x-icon">
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">-->
+    <title>F1 Registration Page</title>
+</head>
+<body>
+    <div class="container-blck">
+        <div class="top">
+            <div class="logo">
+                <img  class= "f1" src="images/f1-formula-18381.jpg" alt="">
+            </div>
+            <img id="hamburger" class="menu-mobile" src="images/menu.svg" alt="">
+            <nav class="navbar">
+                <img id="close" class="close-menu" src="images/exit.svg" alt="">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">My F1</a></li>
+                    <li><a href="">FAQ </a></li>
+                </ul>
+            </nav>
+            <div class="desk">
+                <ul class="desktop">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">My F1</a></li>
+                    <li><a href="">FAQ </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-body">
+            <h1>Welcome to <span>F1</span> where racing becomes unreal!</h1>
+            <p>Join Our Community</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="signup-form">
+                        <form action="" class="mt-5 border p-4 bg-light" id="myForm">
+                            <div class="form-group ">
+                                <label for="user">Username</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <img src="images/person.svg" alt="">
+                                    </span>
+                                    <input type="text" name="" placeholder="Enter a Username" id="user" class="form-control" required>
+                                </div>                
+                            </div>
+                            <div class="form-group ">
+                                <label for="password">Password</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <img src="images/keyboard.svg" alt="">
+                                    </span>
+                                    <input type="password" name="" placeholder="" id="myInput" class="form-control" required>
+                                    <span class="input-group-text">
+                                        <img src="images/eye-fill.svg" id="show" onclick="myFunctions()"></img>
+                                        <img src="images/eye-slash.svg" id="hide" onclick="myFunctions()"></img>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm">Confirm Password</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <img src="images/keyboard.svg" alt="">
+                                    </span>
+                                    <input type="password" class="form-control" name="" placeholder="" id="confirm" required>
+                                    <span class="input-group-text">
+                                        <img src="images/eye-fill.svg" id="display" onclick="myFunction()"></img>
+                                        <img src="images/eye-slash.svg" id="noDisplay" onclick="myFunction()"></img>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mail">Email</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <img src="images/envelope.svg" alt="">
+                                    </span>
+                                    <input type="email" class="form-control" name="" placeholder="example@example.com" id="mail" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone-Number</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <img src="images/phone.svg" alt="">
+                                    </span>
+                                    <input type="text" class="form-control" name="" placeholder="Phone" id="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <div>
+                                    <label for="male" class="form-label"> Male</label>
+                                    <input type="radio"class="radio-inline" name="gender" id="male" value="male" required>
+                                <label for="female" class="form-label"> Female</label>
+                                    <input type="radio" class="radio-line" name="gender" id="female" value="female" required>
+                                </div>
+                                
+                            </div>
+                            <div class="mb-4 text-center">
+                                <input type="reset" name="" class="btn btn-secondary">
+                                <input type="submit" name="" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuMobile = document.getElementById('hamburger')
+            nav = document.querySelector('nav')
+            mobileExit = document.getElementById('close');
+        menuMobile.addEventListener('click', () => {
+            nav.classList.add('menu-mob');
+        })
+        mobileExit.addEventListener('click', () => {
+            nav.classList.remove('menu-mob');
+        })
+    </script>
+    <script type="text/javascript">
+        function myFunctions(){
+            var x = document.getElementById("myInput");
+            if (x.type === "password"){
+                x.type ="text";
+                document.getElementById('hide').style.display = "inline-block";
+                document.getElementById('show').style.display = "none";
+            }
+            else{
+                x.type = "password";
+                document.getElementById('hide').style.display = "none";
+                document.getElementById('show').style.display = "inline-block";
+            } 
+        }
+    </script>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("confirm");
+            if (x.type === "password"){
+                x.type ="text";
+                document.getElementById('noDisplay').style.display = "inline-block";
+                document.getElementById('display').style.display = "none";
+            }
+            else{
+                x.type = "password";
+                document.getElementById('noDisplay').style.display = "none";
+                document.getElementById('display').style.display = "inline-block";
+            } 
+        }
+    </script>
+</body>
+</html>
