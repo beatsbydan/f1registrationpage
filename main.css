@@ -17,10 +17,8 @@ html, body {
 
 body {
   background-image: url(images/8da3dc5e5a6f841e74c0768120273d44.jpg);
-  background-repeat: no-repeat;
+  position: absolute;
   background-size: cover;
-  background-position: center;
-  height: 100vh;
 }
 
 body .container-blck {
