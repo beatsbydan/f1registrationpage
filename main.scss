@@ -16,6 +16,7 @@ body{
     background-image:url(images/8da3dc5e5a6f841e74c0768120273d44.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
     .container-blck{
         padding-bottom: 5%;
         .top{
@@ -121,9 +122,6 @@ body{
             }
             #noDisplay{
                 display: none;
-            }
-            form{
-                position: static;
             }
         }
     }
